@@ -28,7 +28,7 @@ header {
     margin: 1rem;
     position: relative;
     height: 45rem;
-    display: grid;
+    display: flex;
     gap: 0.25rem;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,43 @@ header {
 .startBTN:hover {
     transform: scale(1.0);
 }
-.alpha, .bravo, .charlie, .delta {
+
+.boardBox {
+    display: none;
+    height: 50%;
+    width: 50%;
+    align-items: start;
+    justify-content: center;
+    background-color: bisque;
+    z-index: 100;
+}
+
+.whoseHighScore {
+    /* display: none; */
+    color: blueviolet;
+
+}
+
+.whoseHighScore:hover {
+    cursor: pointer;
+}
+
+.highScore {
+    /* position: relative; */
+    /* top: 2rem; */
+    display: none;
+    flex-wrap: wrap;
+    height: 50%;
+    width: 50%;
+    /* place-items: center; */
+    background-color: forestgreen;
+    color: blue;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.answerBtn {
     margin-bottom: 1em;
     padding: .25rem;
     height: 2rem;
