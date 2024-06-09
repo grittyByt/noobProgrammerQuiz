@@ -7,7 +7,6 @@
 
 body {
     height: 100vh;
-    /* background-color: black; */
     background-image: url(/02-Challenge/Assets/imgs/programming-languages-shutterstock-1680857539.jpg);
 }
 
@@ -149,7 +148,6 @@ input {
 }
 
 .whoseHighScore {
-    /* display: none; */
     color: #057290;
 
 }
@@ -159,35 +157,6 @@ input {
     color: #1bcafa;
 }
 
-.highScore {
-    /* position: relative; */
-    /* top: 2rem; */
-    display: none;
-    /* flex-wrap: wrap; */
-    height: 50%;
-    width: 50%;
-    /* place-items: center; */
-    /* align-content: center; */
-    align-content: center;
-    justify-items: center;
-    
-    background-color: forestgreen;
-    color: blue;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-}
-
-/* #inputTitle {
-    margin-bottom: 5em;
-    position: relative;
-    text-align: center;
-    background-color: brown;
-}
-
-#playerName {
-    margin-left: 12em;
-} */
 
 #questions {
     font-family: "Yeseva One", serif;
@@ -209,43 +178,13 @@ input {
     letter-spacing: 0.05em;
     line-height: 1;
     font-weight: bold;
-
-    /* background: linear-gradient(
-        140deg,
-        hsla(var(--back-color), 50%, 1) min(2em, 20%),
-        hsla(var(--back-color), 50%, 0.6) min(8em, 100%)
-    ); */
     color: hsla(0, 0%, 90%);
     border: none;
-   
-
     transition: transform 0.7s;
 }
 
 :disabled {
     background-color: grey;
-    /* transition: none;
-    transform: none; */
-}
-
-.alpha:hover:disabled {
-    transition: none;
-    transform: none;
-}
-
-.bravo:hover:disabled {
-    transition: none;
-    transform: none;
-}
-
-.charlie:hover:disabled {
-    transition: none;
-    transform: none;
-}
-
-.delta:hover:disabled {
-    transition: none;
-    transform: none;
 }
 
 .answerBtn:hover {
@@ -272,8 +211,6 @@ input {
     height: auto;
     width: auto;
 }
-
-
 
 .feedback {
     position: relative;

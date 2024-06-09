@@ -13,7 +13,6 @@ let feedBack = document.querySelector('.feedback');
 let theCountdown;
 let countdown = 45;
 const answerArr = Array.from(document.getElementsByClassName('answerBtn'));
-// const playerArr = Array.from(document.getElementsByClassName('playerList'));
 
 let storedPlayerArr = localStorage.getItem("Player's Points");
 let playerArr = [];
@@ -26,7 +25,6 @@ if (storedPlayerArr) {
         playerArr = [];
     }
 }
-
 
 // creating various elements
 const myQuestion = document.createElement('h3');
@@ -106,11 +104,7 @@ answerArr.push(myAnswerA, myAnswerB, myAnswerC, myAnswerD);
 // questions and answers as an array containing objects
 let qnA = [{que: 'What year did JavaScript get published?', ans:['1955', '1999', '1995','2010']}, {que: 'What does HTML stand for?', ans:['Hiding Text Mobile Link', 'HyperText Markup Language', 'Hey There Marekting Language', 'HyperText Marking Language']}, {que: 'If HTML is the bones, and JavaScript the brain, what is CSS?', ans: ['The Skin', 'The Eyes', 'The Heart', 'The Feet']}, {que: 'What is a method in JavaScript?', ans: ['The way we go about things', 'The best solution', 'The way of the force', 'A function within an object']}, {que: "If you don't code today what will happen?", ans: ["You won't remember as much", "You'll not get that dream job in tech", "Bye bye to the title of being the best there is", "All of the above"]}];
 
-let enteredPlayerName = playerName.value;
-let playerScore;
 
-// scoreBox.appendChild(enteredPlayerName);
-// scoreBox.appendChild(playerScore);
 
 // these variables loop through the array (qnA) items that are objects by their respective key names
 const iHave = qnA.map(theQuestion => theQuestion.que);
@@ -154,15 +148,6 @@ startOver.addEventListener('click', () => {
 
 })
 
-
-const aQuestion = 0;
-const anAnswer = 0;
-
-
-// localStorage.clear();
-
-
-
 // setting timer to show in bold and putting it inside of it's parent element
 const time = document.createElement('h2');
 time.textContent = countdown + ' sec';
@@ -174,7 +159,7 @@ const headLight = document.createElement('h3');
 headLight.appendChild(theResult);
 feedBack.appendChild(headLight);
 
-
+// button to check the highscore
 highScoreBtn.addEventListener('click', () => {
     startButton.style.display = 'none';
     questionBox.style.display = 'none';
@@ -185,7 +170,6 @@ highScoreBtn.addEventListener('click', () => {
 
 function submit(e) {
     e.preventDefault();
-    // index++;
     let thePlayer = playerName.value.toLowerCase().trim();
     if (thePlayer === "") {
         console.log('It is blank!');
@@ -219,12 +203,6 @@ function printHighscores() {
     });
 }
 
-
-function highScoreDisplay() {
-    questionBox.style.display = 'none';
-    highScoreBoard.style.display = 'block';
-
-}
 
 function timerStart(){
     
@@ -277,8 +255,8 @@ function pointsUp(pointAdded){
     localStorage.setItem('highPoints', playerPoints);
  
 }
-resetPoints();
 // Function to reset points
+resetPoints();
 
 function resetPoints() {
     localStorage.setItem('highPoints', 0);
@@ -289,13 +267,7 @@ function resetPoints() {
 
 
 
-highScoreBoard.addEventListener('click', function(e) {
-    e.preventDefault;
-    highScoreDisplay();
-});
-
-
-
+// quiz
 
 function quizBegin(){
 
@@ -363,7 +335,6 @@ function quizBegin(){
     }
     
     questionBox.style.display = 'block';
-    // document.querySelector('hr').style.display = 'block';
     questionBox.appendChild(questions);
     questionBox.appendChild(answers);
    
@@ -377,6 +348,7 @@ function quizBegin(){
 
     firstQuestion();
 
+    // answer button loop
     answerArr.forEach((button) => {
         button.addEventListener("click", (e) => {
             let pressedAnswer = e.target.textContent;
@@ -404,6 +376,7 @@ function quizBegin(){
         });
     });
 
+    // an array of methods for the questions
     const questionContainer = [{funct: secondQuestion}, {funct: thirdQuestion}, {funct: fourthQuestion}, {funct: fifthQuestion}];
 
     const nextQuestions = questionContainer.map(nextQuestion => nextQuestion.funct);
