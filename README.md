@@ -1,1 +1,3 @@
 # noobProgrammerQuiz
+
+I designed this quiz as part of a challenge from a coding boot camp I attended at the University of Texas - Austin.  I chose to base my five question quiz around simple knowledge that is discussed in the tech industry.  Utilizing local storage within the javascript file players are able to score points based on the answers they choose.  500 points is rewarded for every correct answer.  I thought of adding a feature for deducting points with the wrong answer choices, but if I'm being quite honest it wasn't a part of the criteria so I went on to get the project complete so I can move on to the next one.  Feel free to try out the Noob Quiz that I created using HTML, CSS, and JavaScript.
