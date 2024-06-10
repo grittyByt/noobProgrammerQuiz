@@ -77,7 +77,7 @@ startOver.textContent = 'Play Again';
 
 // attaching elements to other elements by their variable names
 playerInfo.appendChild(inputTag);
-highScoreBoard.appendChild(playerInfo);
+formForPlayer.appendChild(playerInfo);
 inputArea.appendChild(playerName);
 inputArea.appendChild(enterPlayerBtn);
 formForPlayer.appendChild(inputArea);
@@ -110,6 +110,7 @@ let qnA = [{que: 'What year did JavaScript get published?', ans:['1955', '1999',
 const iHave = qnA.map(theQuestion => theQuestion.que);
 const iWant = qnA.map(theAnswer => theAnswer.ans);
 
+let aQuestion = 0;
 
 
 // the right answers
